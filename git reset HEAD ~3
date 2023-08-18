@@ -1,0 +1,268 @@
+[33mcommit 159fd9f804dcfdad543939264be702d9a53c5707[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31mupstream/main[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: af37c45 1c046ec
+Author: narae18 <95646233+narae18@users.noreply.github.com>
+Date:   Fri Aug 18 20:52:57 2023 +0900
+
+    Merge pull request #8 from narae18/main
+    
+    fix: editorpost like annotate로 수정
+
+[33mcommit 1c046ec46460bf0013c29aa5e4e6c80c73a069aa[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Fri Aug 18 20:51:43 2023 +0900
+
+    fix: editorpost like annotate로 수정
+
+[33mcommit af37c45396b4c86f091526c4cbadf2be0a446fc8[m
+Merge: 9d5f6ab e4818ad
+Author: narae18 <95646233+narae18@users.noreply.github.com>
+Date:   Fri Aug 18 19:24:37 2023 +0900
+
+    Merge pull request #7 from narae18/main
+    
+    fix: EditorProfile 모델/관련코드수정
+
+[33mcommit e4818ad04296bbab1c2085f6bfdb64c292cc979e[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Fri Aug 18 19:22:22 2023 +0900
+
+    fix:editorprofile 모델 수정,시리얼라이저수정
+
+[33mcommit bd411325eebf88c71b459530857a5883fdd7f26f[m
+Merge: 6525516 9d5f6ab
+Author: narae18 <starestarstar@naver.com>
+Date:   Fri Aug 18 19:21:39 2023 +0900
+
+    Merge branch 'main' of https://github.com/LikeLion-at-DGU/MMM_BE
+
+[33mcommit 9d5f6ab4083c0273cc57f441fefb2aff6b5a6cb9[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 18:59:13 2023 +0900
+
+    feat: 프론트 주소 추가
+
+[33mcommit eb4ac415b1d13886132a56d7d3ec071c723845e9[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 18:55:28 2023 +0900
+
+    feat: 프론트 주소 세팅
+
+[33mcommit 02ce5033fcf76a4ce55719000d35cc17044e659e[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 16:46:11 2023 +0900
+
+    feat: 프론트 포트 주소 추가
+
+[33mcommit 210b0f53fd9c6c0a5f3a9ce6e4590a8e25d7d701[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 16:10:31 2023 +0900
+
+    feat:     'access-control-allow-origin-headers' 추가
+
+[33mcommit a859376a3faa1397e2e47750094f5f25e08aab8b[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 16:01:58 2023 +0900
+
+    feat: SOCIALACCOUNT_LOGIN_ON_GET 추가
+
+[33mcommit 10fbe5f0a78fe89b4d80b4bea4b03c1a6e983efb[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 15:50:24 2023 +0900
+
+    feat: access-control-allow-headers 추가
+
+[33mcommit b2c979bd0189a5048c9911e65d4cb3666c1ce846[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 15:40:35 2023 +0900
+
+    feat: settings.py CORS_ALLOW_HEADERS 추가
+
+[33mcommit 65255166d3ee1979c712bb253cd116fb15909cd7[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Fri Aug 18 15:21:33 2023 +0900
+
+    fix: user못찾는오류 해결
+
+[33mcommit 4ba1255806a4a01a9007f0630d609d321fa065d6[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Fri Aug 18 12:52:57 2023 +0900
+
+    fixing: editorprofile헛짓거리 복구
+
+[33mcommit 3534f8cef169ae4d439addf3ec5f101dbc90d9c0[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 10:59:32 2023 +0900
+
+    fix: 네이버 주소 수정 2
+
+[33mcommit 13c000b994c0ef89d73ff782f6db49cf522cf4f3[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 10:57:10 2023 +0900
+
+    fix: 네이버 주소 수정
+
+[33mcommit 4f62614cc9ba09a4643d2be9a54e05f8798cd719[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 10:43:41 2023 +0900
+
+    fix: 네이버 api 주소 수정
+
+[33mcommit bb275a0a7becee91bd4035f83d2c3541b96d6079[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 10:40:51 2023 +0900
+
+    fix: 네이버 url 수정
+
+[33mcommit 4bf147813585a732c206ee73398b171c72eef0b0[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 10:37:23 2023 +0900
+
+    fix: 네이버 secret_key 관리
+
+[33mcommit 4baf5e1c63f019265c9d9cb58d091307dc7a43ed[m
+Merge: 180e3b8 ebe966c
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 09:35:54 2023 +0900
+
+    fix: 재배포 수정
+
+[33mcommit 180e3b835c051ebfe0be51f4836cea149be7b846[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Fri Aug 18 09:18:44 2023 +0900
+
+    fix: admin db 포함 배포용 수정
+
+[33mcommit 359083b892ca4f90063d541d27127397d3d0eac5[m
+Merge: 0cde3be 5a2d094
+Author: narae18 <95646233+narae18@users.noreply.github.com>
+Date:   Thu Aug 17 20:45:06 2023 +0900
+
+    Merge pull request #6 from narae18/main
+    
+    fix : ID 필드 추가
+
+[33mcommit 5a2d094b646affc2fb7b08dd45998eaa110eec5c[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Thu Aug 17 20:40:26 2023 +0900
+
+    fix : ID 필드 추가
+
+[33mcommit 0cde3befa9e50b1a4c09a97a834b56bc04ecfc51[m
+Merge: 7ad4014 510403a
+Author: narae18 <95646233+narae18@users.noreply.github.com>
+Date:   Thu Aug 17 20:33:18 2023 +0900
+
+    Merge pull request #5 from narae18/main
+    
+    fix: EditorPostList 최신순정렬로 수정
+
+[33mcommit 510403a7a615fe192a0430a4373dacdcca0bd2f1[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Thu Aug 17 20:31:57 2023 +0900
+
+    fix: EditorPostList 최신순정렬로 수정
+
+[33mcommit 7ad4014ded9762cde191a78346474f3067587a5e[m
+Merge: 6c07314 97116e4
+Author: narae18 <95646233+narae18@users.noreply.github.com>
+Date:   Thu Aug 17 20:24:39 2023 +0900
+
+    Merge pull request #4 from narae18/main
+    
+    fix : editorpost 보완
+
+[33mcommit 97116e4146b70ea444c82aaba245e2d6326557d7[m
+Merge: b11bcbe 6c07314
+Author: narae18 <starestarstar@naver.com>
+Date:   Thu Aug 17 20:23:13 2023 +0900
+
+    Merge branch 'main' of https://github.com/narae18/MMM_BE_forked
+
+[33mcommit b11bcbe0d520586892a636fd1c98a9eb7a90fa05[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Thu Aug 17 20:16:12 2023 +0900
+
+    fix : editor post 수정
+
+[33mcommit 6c0731410afa9af66f12dd6ab0eb47c9c4d3373f[m
+Merge: 253f7c8 ed718df
+Author: narae18 <95646233+narae18@users.noreply.github.com>
+Date:   Thu Aug 17 18:32:48 2023 +0900
+
+    Merge pull request #3 from narae18/main
+    
+    feat : EditorPost 모집상태 표시 기능 추가
+
+[33mcommit ed718dfd2fb6b8b65de5a7e1792e44577064dc9c[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Thu Aug 17 18:31:48 2023 +0900
+
+    feat : EditorPost 모집상태 표시 기능 추가
+
+[33mcommit ebe966c001f100c7ea629bda9e55168e87fd0041[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Thu Aug 17 18:27:50 2023 +0900
+
+    feat: 배포 설정, api url 추가
+
+[33mcommit 253f7c8ec17c3c6c7880eac0b71911b96b10a5da[m
+Merge: 0d46a04 18ebeaf
+Author: narae18 <95646233+narae18@users.noreply.github.com>
+Date:   Thu Aug 17 02:26:42 2023 +0900
+
+    Merge pull request #2 from pump9918/main
+    
+    fix: ttsView permission 공백
+
+[33mcommit 18ebeafd576be0a1cf364c371a8c9fab088193b1[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Thu Aug 17 02:19:05 2023 +0900
+
+    fix: 일반 게시물 title, content 삭제
+
+[33mcommit 9a4fbbe8e71b2d51df100c4081ff079260e02228[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Thu Aug 17 01:56:59 2023 +0900
+
+    fix: profile id 없이 불러오기 설정
+
+[33mcommit 94f9b150c85f558e59d19642601ceee9754d2e6a[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Thu Aug 17 01:25:03 2023 +0900
+
+    fix: ttsView permission 공백
+
+[33mcommit 0d46a04e38ae4af89be8452072e0ee2c3cbf9d73[m
+Merge: 5727180 6e20844
+Author: narae18 <starestarstar@naver.com>
+Date:   Wed Aug 16 16:46:45 2023 +0900
+
+    Merge branch 'main' of https://github.com/LikeLion-at-DGU/MMM_BE
+
+[33mcommit 6e20844b5558021e4fff58da3c6b4efa14714df3[m
+Merge: 9b8ec2c 6a6026d
+Author: narae18 <95646233+narae18@users.noreply.github.com>
+Date:   Wed Aug 16 16:46:32 2023 +0900
+
+    Merge pull request #1 from pump9918/main
+    
+    fix: requirement 추가
+
+[33mcommit 5727180d8d4e7ea3fb242c9f050f1307df4c942b[m
+Author: narae18 <starestarstar@naver.com>
+Date:   Wed Aug 16 16:42:10 2023 +0900
+
+    fix: EditorPost뷰셋 list함수 오류 수정
+
+[33mcommit 6a6026daa43b3605cdd3f2b9d12116bb15ed0360[m
+Author: pump9918 <hoyeon313131@naver.com>
+Date:   Wed Aug 16 16:33:22 2023 +0900
+
+    fix: requirement 추가
+
+[33mcommit 9b8ec2c3f5106da143824785e5a6b2ef6dbf596a[m
+Merge: 23bc91c 6a788c1
+Author: narae18 <starestarstar@naver.com>
+Date:   Wed Aug 16 16:19:56 2023 +0900
+
+    fix.address

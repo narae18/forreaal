@@ -4,17 +4,18 @@ from django.db.models import Count, Q
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework import viewsets
 # from .permissions import CustomReadOnly
-from user.models import User
+from user.models import User, EditorProfile
 from .models import Post, TTSAudioTitle, TTSAudio, Like
 from .serializers import PostSerializer, EditorPostSerializer
 from .paginations import PostPagination
-
+ 
 #tts 관련
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
+from django.db.models import Count, Q
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -22,10 +23,13 @@ class PostViewSet(viewsets.ModelViewSet):
     permission_classes = []
     
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    # filterset_fields = ["author"] # 이름으로 게시물 모아보기
     search_fields = ["author"]
-    ordering_fields = ["published_date"] #최신 순 정렬
+    ordering_fields = ["published_date"]
     pagination_class = PostPagination
+    
+    def get_queryset(self):
+        # tts null 제와
+        return self.queryset.exclude(tts_audio__isnull=True, tts_title_audio__isnull=True)
 
     def get_serializer_class(self):
         if self.action in ['list', 'retrieve']:
@@ -58,16 +62,11 @@ class PostViewSet(viewsets.ModelViewSet):
             existing_tts_audio = None
 
             if tts_title_message:
-                try:
-                    existing_tts_title = TTSAudioTitle.objects.get(title_message=tts_title_message, user=request.user)
-                except TTSAudioTitle.DoesNotExist:
-                    pass
+                existing_tts_title = TTSAudioTitle.objects.filter(title_message=tts_title_message, user=request.user).first()
 
             if tts_message:
-                try:
-                    existing_tts_audio = TTSAudio.objects.get(message=tts_message, user=request.user)
-                except TTSAudio.DoesNotExist:
-                    pass
+                existing_tts_audio = TTSAudio.objects.filter(message=tts_message, user=request.user).first()
+
 
             post = post_serializer.save(author=request.user)
 
@@ -110,7 +109,8 @@ class PostViewSet(viewsets.ModelViewSet):
 
 
 class EditorPostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
+    queryset = Post.objects.annotate(like_cnt=Count('likes'))
+    
     serializer_class = EditorPostSerializer
     permission_classes = []
 
@@ -126,7 +126,7 @@ class EditorPostViewSet(viewsets.ModelViewSet):
     def like(self, request, pk=None):
         post = self.get_object()
         user = request.user
-
+        # likes = Like.objects.filter(user=user, post=post)
         try:
             like = Like.objects.get(user=user, post=post)
             like.delete()
@@ -135,6 +135,8 @@ class EditorPostViewSet(viewsets.ModelViewSet):
             Like.objects.create(user=user, post=post)
             return Response({'message': '좋아요 추가됨'})
     
+
+
     @action(detail=False, methods=['GET'])
     def top3(self, request):
         queryset = self.get_queryset().annotate(like_count=Count('likes')).order_by('-like_count')[:3]
@@ -144,7 +146,8 @@ class EditorPostViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['PUT'])
     def update_post(self, request, pk=None):
         post = self.get_object()
-        if request.user.is_staff:
+        user = request.user
+        if EditorProfile.objects.filter(user=user).exists():
             serializer = EditorPostSerializer(post, data=request.data, context={'request': request})
             if serializer.is_valid():
                 serializer.save()
@@ -155,12 +158,13 @@ class EditorPostViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['DELETE'])
     def delete_post(self, request, pk=None):
+        user = request.user
         post = self.get_object()
-        if request.user.is_staff:
+        if EditorProfile.objects.filter(user=user).exists():
             post.delete()
             return Response({'message': '게시글이 삭제되었습니다!'}, status=status.HTTP_204_NO_CONTENT)
         else:
-            return Response({'message': '작성 권한이 필요해요 🥹'}, status=status.HTTP_403_FORBIDDEN)
+            return Response({'message':  '권한이 필요해요 🥹'}, status=status.HTTP_403_FORBIDDEN)
 
 
     def list(self, request, *args, **kwargs):
